@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chesskuo.tw","root":"/","scheme":"Gemini","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":false,"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Prologue最近剛好有用手機看書的需求再加上看的都是一些很古老的書 (ex. 山海經)自然就會出現許多稀難字有興趣的朋友可以先到 這裡 看一下自己是不有一堆口 XD其實就連電腦應該也不少人滿滿的口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 7.0+ CJK 擴充字 新增額外字庫">
+<meta property="og:url" content="https://blog.chesskuo.tw/post/20200626-Android-7-0-CJK-%E6%93%B4%E5%85%85%E5%AD%97%E9%A1%8D%E5%A4%96%E5%AD%97%E5%BA%AB-%E6%95%99%E5%AD%B8/index.html">
+<meta property="og:site_name" content="Chess.blog">
+<meta property="og:description" content="Prologue最近剛好有用手機看書的需求再加上看的都是一些很古老的書 (ex. 山海經)自然就會出現許多稀難字有興趣的朋友可以先到 這裡 看一下自己是不有一堆口 XD其實就連電腦應該也不少人滿滿的口">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/RwRoJ8V.jpg">
+<meta property="og:image" content="https://i.imgur.com/lkwvFo4.jpg">
+<meta property="article:published_time" content="2020-06-26T12:11:47.000Z">
+<meta property="article:modified_time" content="2020-06-26T12:24:08.778Z">
+<meta property="article:author" content="Chess Kuo">
+<meta property="article:tag" content="android">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/RwRoJ8V.jpg">
+
+<link rel="canonical" href="https://blog.chesskuo.tw/post/20200626-Android-7-0-CJK-%E6%93%B4%E5%85%85%E5%AD%97%E9%A1%8D%E5%A4%96%E5%AD%97%E5%BA%AB-%E6%95%99%E5%AD%B8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Android 7.0+ CJK 擴充字 新增額外字庫 | Chess.blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Chess.blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.chesskuo.tw/post/20200626-Android-7-0-CJK-%E6%93%B4%E5%85%85%E5%AD%97%E9%A1%8D%E5%A4%96%E5%AD%97%E5%BA%AB-%E6%95%99%E5%AD%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Chess Kuo">
+      <meta itemprop="description" content="與其擔心被批評，</br>不如想辦法被敬佩。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chess.blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Android 7.0+ CJK 擴充字 新增額外字庫
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-26 20:11:47 / Modified: 20:24:08" itemprop="dateCreated datePublished" datetime="2020-06-26T20:11:47+08:00">2020-06-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Prologue"><a href="#Prologue" class="headerlink" title="Prologue"></a>Prologue</h1><p>最近剛好有用手機看書的需求<br>再加上看的都是一些很古老的書 (ex. 山海經)<br>自然就會出現許多稀難字<br>有興趣的朋友可以先到 <a href="https://ctext.org/font-test-page/zh" target="_blank" rel="noopener">這裡</a> 看一下自己是不有一堆口 XD<br>其實就連電腦應該也不少人滿滿的口</p>
+<a id="more"></a>
+
+<img src="https://i.imgur.com/RwRoJ8V.jpg" height="500px">
+
+<p>那也因為這樣<br>書看一看就一個口<br>而那些古字通常都是重要的名詞<br>我要馬得跳過要馬得去用我的電腦<br>哪來隨時能用電腦啊<br>我就看的正爽被卡，豈有此理 =日=<br>所以我很不爽，就產生了這篇文章…</p>
+<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>先來說說為什麼會出現口<br>一般我們的裝置中都會有一些預設字體<br>而我們看到的 “字” 其實是從字體檔中<br>把 <code>編號</code> 對應 <code>圖形</code> 然後顯示給我們看<br>那如果字體檔本身不支援到某些編號<br>自然就印不出那些字啦~ 所以就變成口了</p>
+<p>好的 那就開始進入正題</p>
+<p>這次要用的字體為 <a href="http://fonts.jp/hanazono/" target="_blank" rel="noopener"><code>hanazono</code></a> (俗稱 <code>花園字體</code>)<br>本身支持 <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%B5%B1%E4%B8%80%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97" target="_blank" rel="noopener"><code>CJK</code></a> <code>Ext.A</code> ~ <code>Ext.F</code><br>而最新的擴充區只到 <code>G</code><br>等於說 <code>花園字體</code> 目前幾乎全包了各種詭異中文字，字量堪稱龐大<br>也讓我們期待什麼時候更新 <code>Ext.G</code> 進去吧XD</p>
+<h1 id="Notice-amp-Tools"><a href="#Notice-amp-Tools" class="headerlink" title="Notice &amp; Tools"></a>Notice &amp; Tools</h1><ul>
+<li><p>注意</p>
+<ul>
+<li><div class="note danger"><p>&gt; <strong>ROOT Only</strong> &lt;<br>      接下來會動到系統<br>      如果不會救磚，請不要恣意操作</p>
+</div></li>
+<li>沒有 root 的檔案瀏覽器是沒辦法動到系統的喔<br>  當然你也可以用 <code>adb shell</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>沒有 Root，不叫 Android</p>
+</blockquote>
+<ul>
+<li><p>工具</p>
+<ul>
+<li><a href="https://forum.xda-developers.com/showthread.php?t=1523691" target="_blank" rel="noopener">MiXplorer</a><ul>
+<li>先跟各位介紹一款 Android 上目前我認為最神的檔案瀏覽器<br>  這不是工商，因為我沒收錢<br>  至於它有多強大的功能，各位可以自己去看看</li>
+<li>接下來的操作你會大量需要它</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>所需檔案</p>
+<ul>
+<li><code>HanaMinA.ttf</code>, <code>HanaMinB.ttf</code> (下載花園字體解包獲得)</li>
+<li><code>/system/etc/fonts.xml</code></li>
+<li><code>/system/fonts/</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><ol>
+<li><p>先將 <code>HanaMinA.ttf</code>, <code>HanaMinB.ttf</code> 複製到 <code>/system/fonts/</code> 底下<br> 並將這兩個檔案權限設定為 <code>644</code> (<code>-rw-r--r--</code>)<br> 並且 <code>擁有者</code> 與 <code>群組</code> 確定為 <code>root</code></p>
+</li>
+<li><p>打開 <code>/system/etc/fonts.xml</code> 開始修改<br> 直接拉到底部</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">family</span> <span class="attr">lang</span>=<span class="string">"zg"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">font</span> <span class="attr">weight</span>=<span class="string">"400"</span> <span class="attr">style</span>=<span class="string">"normal"</span>&gt;</span>MyanmarSangamZawgyi-Regular.otf<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">font</span> <span class="attr">weight</span>=<span class="string">"700"</span> <span class="attr">style</span>=<span class="string">"normal"</span>&gt;</span>MyanmarSangamZawgyi-Bold.otf<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">familyset</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> 你會看到一堆類似的東西，裡面內容物可能不一樣<br> 不過沒關係<br> 我們只需要找到 <code>&lt;/familyset&gt;</code><br> 在它的前面新增東西即可</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">family</span> <span class="attr">lang</span>=<span class="string">"zg"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">font</span> <span class="attr">weight</span>=<span class="string">"400"</span> <span class="attr">style</span>=<span class="string">"normal"</span>&gt;</span>MyanmarSangamZawgyi-Regular.otf<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">font</span> <span class="attr">weight</span>=<span class="string">"700"</span> <span class="attr">style</span>=<span class="string">"normal"</span>&gt;</span>MyanmarSangamZawgyi-Bold.otf<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- custom CKJ Extension begin --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">family</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">font</span> <span class="attr">weight</span>=<span class="string">"400"</span> <span class="attr">style</span>=<span class="string">"normal"</span>&gt;</span>HanaMinA.ttf<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">family</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">font</span> <span class="attr">weight</span>=<span class="string">"400"</span> <span class="attr">style</span>=<span class="string">"normal"</span>&gt;</span>HanaMinB.ttf<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- custom CKJ Extension end --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">familyset</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> 那兩段灰色字之間就是我們自己新增的段落</p>
+<p> 儲存之後<br> 重開瀏覽器去看上面一堆口的網頁是否有正常顯示那些字<br> 有顯示那些奇怪字就代表成功囉~</p>
+ <img src="https://i.imgur.com/lkwvFo4.jpg" height="500px">
+
+</li>
+</ol>
+<h1 id="Epilogue"><a href="#Epilogue" class="headerlink" title="Epilogue"></a>Epilogue</h1><p>雖然說整個教學區塊非常短就結束了<br>但我幾乎都要爬爆 Google 了才找到解答 QQ<br>主要是因為網路上的教程幾乎都是在處理多字重的問題<br>完全沒看到討論擴充字<br>花了幾天終於看到一篇作者自己寫了 Magisk 套件來處理這個問題<br>我也去分析了<a href="https://huansyuan1048576.blogspot.com/2019/04/Resources.html" target="_blank" rel="noopener">這個專案</a>到底如何做到這個功能<br>也因此才完整理解了 <code>font.xml</code> 這份文件的運作原理</p>
+<p>再來就是為什麼標題會寫 <code>7.0+</code> 呢?<br>是因為 Android 7.0 之後的字體 loading 方式有所變更<br>目前為止到 10.0 應該都是可以用的 (?<br>在之前都是由 <code>fallback_fonts.xml</code> 與 <code>fonts.xml</code> 共存來處理<br>而在 7.0 之後直接捨棄了 <code>fallback_fonts.xml</code><br>並將整個 <code>fonts.xml</code> 重寫<br>使得檔案減少但是功能卻更齊全也更容易讀懂</p>
+<h1 id=""><a href="#" class="headerlink" title="$#@%$#"></a>$#@%$#</h1><p>最後的最後我一定要噴一下<br>原本用了這支 ASUS Zenfone 3 Deluxe 一年多就不維護系統 (這支是旗艦機欸 ASUS 大大<br>連原本自家論壇都被抹掉 一堆資料都找不太到<br>這些綜合因素讓我很不爽<br>一度有了這隻壞了就想要跳坑 iPhone 的想法</p>
+<p>但經過這次之後我覺得還是 Android 比較香<br>喔絕對不是 ASUS 香<br>我以後不會再買這家的手機了<br>再加上 iPhone 感覺越來越沒有特別突出的地方<br>所以最後決定還是要留在我大安卓自由國度 ~</p>
+<p>不知道這隻什麼時候會壞掉 我想換 Pixel ~</p>
+<p>如有任何指教 歡迎發信給我唷 ~</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/android/" rel="tag"># android</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/20200618-AIS3-2020-pre-exam-Writeups/" rel="prev" title="AIS3 2020 pre-exam Writeups">
+      <i class="fa fa-chevron-left"></i> AIS3 2020 pre-exam Writeups
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Prologue"><span class="nav-number">1.</span> <span class="nav-text">Prologue</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intro"><span class="nav-number">2.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Notice-amp-Tools"><span class="nav-number">3.</span> <span class="nav-text">Notice &amp; Tools</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tutorial"><span class="nav-number">4.</span> <span class="nav-text">Tutorial</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Epilogue"><span class="nav-number">5.</span> <span class="nav-text">Epilogue</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">6.</span> <span class="nav-text">$#@%$#</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chess Kuo"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Chess Kuo</p>
+  <div class="site-description" itemprop="description">與其擔心被批評，</br>不如想辦法被敬佩。</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/gyc880323" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;gyc880323" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:owo@chesskuo.tw" title="E-Mail → mailto:owo@chesskuo.tw" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chess Kuo</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
